@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMDb Title ID to iFrame Converter</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #result {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    #movieFrame {
+        width: 100%;
+        height: 500px; /* Adjust height as needed */
+        border: 1px solid #ccc;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<h1>IMDb Title ID to iFrame Converter</h1>
+<p>Enter the IMDb title ID:</p>
+<input type="text" id="titleIdInput">
+<button onclick="generateUrl()">Open iFrame</button>
+<div id="result"></div>
+<iframe id="movieFrame" src="" frameborder="0"></iframe>
+
+<script>
+    function generateUrl() {
+        var titleId = document.getElementById('titleIdInput').value;
+        var baseUrl = 'https://vidsrc.to/embed/movie/';
+        var url = baseUrl + titleId;
+        document.getElementById('movieFrame').src = url;
+    }
+</script>
+</body>
+</html>
