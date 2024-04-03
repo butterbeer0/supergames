@@ -11,7 +11,11 @@
   <title>Goodbye - SuperGames</title>
 </head>
 <body>
-   <span>
+   <span class="data">
+     <span style="margin-bottom:15px;font-size:50px;padding: 15px;background-color:lime;color:black;font-weight:bolder;border-radius:50%;" class="material-symbols-outlined">
+waving_hand
+</span>
+
      Hello everyone due to recent events and unfortunate circumstances the desicion has been made to close SuperGames permanently. So goodbye.
      
      <p id="names">- Mousy, Italianidiot</p>
@@ -33,14 +37,14 @@
           height: 100vh;
           width: 100vw;
           background-color: var(--black);
-          color: white;
+          color: lightgray;
 
           display: flex;
           justify-content: center;
           align-items: center;
 
         }
-        span {
+        .data {
           min-height: calc(25% - 20px);
           width: calc(75% - 20px);
           overflow: hidden;
@@ -60,9 +64,8 @@
           outline: 5px transparent solid;
           border: solid 3px var(--darkGray);
         }
-        span:hover {
+        .data:hover {
          outline: 5px solid white; 
-         transform: scale(1.02);
          border: none;
          outline-offset: 5px;
         }
@@ -77,7 +80,7 @@
         
    	window.onload = () => {
     	document.querySelector("span").addEventListener("mouseover", () => {
-      	document.querySelector("#names").innerHTML = 'Nothing ever lasts forever...';
+      	document.querySelector("#names").innerHTML = 'Nothing ever lasts forever... 🤷‍♂';
       }) 
       document.querySelector("span").addEventListener("mouseout", () => {
       	document.querySelector("#names").innerHTML = '- Mousy, ItalianIdiot';
