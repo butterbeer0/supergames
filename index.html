@@ -1,128 +1,80 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <script src="https://x.ube.lol/3p/hideMyWindow.js"></script>
-        <script src="https://x.ube.lol/3p/supergames.js"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-7FN7LEVWXD');
-        </script>
-
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="storage/css/index6.css">
-        <title>New Tab</title>
-
-        <meta name="description" content="supergames; an open source unblocked games website hosting 250+ games with downloadable support, a clean and centralised user interface and no iframe embedding">
-        <meta property="og:site_name" content="supergames">
-        <meta property="og:title" content="supergames">
-        <meta property="og:type" content="website">
-        <meta property="og:description" content="supergames; an open source unblocked games website hosting 250+ games with downloadable support, a clean and centralised user interface and no iframe embedding">
-  </head>
-  <body>
-    
-  
-      <div class="content-side">
-          <h1 class="typewriter"><span id="cursor"></span></h1>
-          <h2>version 1.2 | release build</h2>
-          <br>
-
-          <div class="button-container">
-              <div class="gamesbutton" onclick="window.location='games/index.html';">
-                  <img src="images/other/controller.png">
-                  <div class="button-text">
-                      <p>games</p>
-                  </div>
-              </div>
-          
-              <div class="gamesbutton" onclick="window.location='apps/index.html';">
-                  <a href="apps/index.html"><img src="images/other/apps.png"></a>
-                  <div class="button-text">
-                      <p>apps</p>
-                  </div>
-              </div>
-          </div>
-          
-
-          <br>
-
-          <a id="openBlankLink">CLICK HERE TO HIDE THIS WINDOW FROM GOGUARDIAN</a></p>
-          <p class="linkp"><a href="beta.html">extras/dev</a>
-          <p class="linkp"><a href="settings.html">settings</a>
-          <p class="linkp"><a href="/chat/index.html">chat</a>
-              
-          
-              
-      </div>
-      
-      <script src="https://x.ube.lol/3p/supergames.js"></script>
-      <script>
-        const text = "supergames";
-        const typingDelay = 500; 
-        const initialDelay = 100; 
-        const cursor = document.getElementById("cursor");
-        const h1 = document.querySelector(".typewriter");
-
-        function type() {
-            setTimeout(() => {
-                for (let i = 0; i < text.length; i++) {
-                setTimeout(() => {
-                    h1.textContent += text[i];
-                    if (i === text.length - 1) {
-                    cursor.style.display = "none"; 
-                    }
-                }, i * typingDelay);
-                }
-            }, initialDelay);
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Goodbye - SuperGames</title>
+</head>
+<body>
+   <span>
+     Hello everyone due to recent events and unfortunate circumstances the desicion has been made to close SuperGames permanently. So goodbye.
+     
+     <p id="names">- Mousy, Italianidiot</p>
+   </span>
+   
+   <style>
+     
+        :root {
+          --black: #000000;
+          --almostBlack: #161616;
+          --darkGray: #2A2A2A;
+          --gray: #3B3B3B;
+          --selectedGray: #525252;
+          --textGray: gray;
+          --white: white;
+          --lightTextGray: lightgray;
         }
+        body {
+          height: 100vh;
+          width: 100vw;
+          background-color: var(--black);
+          color: white;
 
-        type();
-      </script>
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var openBlankLink = document.getElementById('openBlankLink');
-        
-            openBlankLink.addEventListener('click', function(event) {
-                event.preventDefault();
-        
-                var newTab = window.open('about:blank', '_blank');
-        
-                if (newTab) {
-                    var newTabBody = newTab.document.body;
-                    newTabBody.style.padding = '0';
-                    newTabBody.style.margin = '0';
-                    newTabBody.style.border = 'hidden';
-        
-                    var iframe = document.createElement('iframe');
-                    iframe.src = window.location.href;
-                    iframe.style.width = '100%';
-                    iframe.style.height = '100%';
-                    iframe.style.border = 'hidden';
-
-                    iframe.onload = function() {
-                        var links = iframe.contentDocument.querySelectorAll('a[target="_blank"]');
-                        links.forEach(function(link) {
-                            link.addEventListener('click', function(event) {
-                                event.preventDefault();
-                                iframe.contentWindow.location.href = link.href;
-                            });
-                        });
-                    };
-        
-                    newTab.document.body.appendChild(iframe);
-                } else {
-                    alert("couldn't manage to open a new tab :(");
-                }
-            });
-        });
-        </script>    
-
-      <script src="storage/js/cloak.js"></script>
-      <script src="storage/js/theme.js"></script>
-  </body>
+        }
+        span {
+          min-height: calc(25% - 20px);
+          width: calc(75% - 20px);
+          overflow: hidden;
+          display: flex;
+          outline-offset: 20px;
+          font-weight: bolder;
+          flex-direction: column;
+          transition: 150ms;
+          text-align: center;
+          justify-content: center;
+          padding: 20px;
+          font-family: sans-serif;
+          align-items: center;
+          background-color: var(--almostBlack);
+          font-size: 30px;
+          border-radius: 30px;
+          outline: 5px transparent solid;
+          border: solid 3px var(--darkGray);
+        }
+        span:hover {
+         outline: 5px solid white; 
+         transform: scale(1.02);
+         border: none;
+         outline-offset: 5px;
+        }
+        p {
+          color: gray;
+          font-size: 25px;
+        }
+   
+   </style>
+   <script>
+   	window.onload = () => {
+    	document.querySelector("span").addEventListener("mouseover", () => {
+      	document.querySelector("#names").innerHTML = 'Nothing ever lasts forever...';
+      }) 
+      document.querySelector("span").addEventListener("mouseout", () => {
+      	document.querySelector("#names").innerHTML = '- Mousy, ItalianIdiot';
+      }) 
+    }
+    
+   </script>
+</body>
 </html>
